@@ -23,7 +23,10 @@ function App() {
             <Card className="mb-4">
               <Card.Body>
                 <Card.Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                <Card.Text dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+                <Card.Text>
+                  <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+                  <a href={`/post/${post.slug}`}>Read more...</a>
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
